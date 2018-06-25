@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="js/font-awesome-4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="js/jquery-ui-1.11.4/jquery-ui.min.css"/>
+<link rel="stylesheet" href="js/angular-material-1.1.1/angular-material.min.css">
+<style>
+.navbar {
+	border-radius: 0;
+}
+</style>
+<script src="js/angular/angular.js"></script>
+<script src="js/angular/angular-route.js"></script>
+<script src="js/app.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
+<script src="https://code.highcharts.com/5/js/highcharts.js"></script>
+<script src="js/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+<script src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="js/angular-material-1.1.1/angular-animate.js"></script>
+<script src="js/angular-material-1.1.1/angular-aria.js"></script>
+<script src="js/angular-material-1.1.1/angular-material.js"></script>
+
+<script src="js/websocket/sockjs.js"></script>
+<script src="js/websocket/stomp.js"></script>
+
+<!-- Controllers -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.6/d3.min.js"></script>
+<script src="js/MainController.js"></script>
+<script src="js/loginController.js"></script>
+<script src="js/signupController.js"></script>
+<script src="js/profileController.js"></script>
+<script src="js/aboutController.js"></script>
+<script src="js/configureSchema.js"></script>
+<script src="js/profilingController.js"></script>
+
+
+<!-- Service -->
+<script src="js/service.js"></script>
+<title>
+Let Us See
+</title>
+<link rel="shortcut icon" href="images/analytics.png">
+
+</head>
+<body ng-app="webApp" class="default-background" ng-controller="MainController">
+
+	<nav class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<img src="images/analytics.png" width="40" height="40"/>
+			<a class="navbar-brand" title="Advance Data Quality Rule">ADQT</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li><a ng-click="login()" ng-class="{'selected-link':selectedLink == 'login'}" ng-show="!isLoggedIn">Login</a></li>
+			<li><a ng-click="home()" ng-show="isLoggedIn" ng-class="{'selected-link':selectedLink == 'home'}">Home</a></li>
+			<li><a ng-click="configure()" ng-show="isLoggedIn" ng-class="{'selected-link':selectedLink == 'configure'}">Configure</a></li>
+			<li><a ng-click="profile()" ng-show="isLoggedIn" ng-class="{'selected-link':selectedLink == 'profiling'}">Profiling</a></li>
+			<!-- <li><a ng-click="about();">About</a></li> -->
+			<li><a ng-click="logout()" ng-show="isLoggedIn">Logout</a></li>
+		</ul>
+	</nav>
+
+	<div class="">
+		<div ng-view></div>
+	</div>
+
+</body>
+<style>
+.selected-link{
+background-color:black;
+}
+
+
+</style>
+</html>
+

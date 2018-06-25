@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+
+.default-background{
+	background-image:url("../images/bigdata-analytics.jpg")
+}
+
+.navbar-header img{
+	float:left;
+	margin-top:5px;
+}
+.login-panel{
+	box-shadow: 2px 5px 1px #8c8c8c;
+	margin-top: 50px;
+	background: white;
+    padding: 10px;
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:white;
+	cursor: pointer;
+}
+.navbar-inverse .navbar-brand{
+	color:white;
+	cursor: pointer;
+}
+
+.navbar-inverse {
+    background-color: #0e586d;
+    border-color: #3d588c;
+}
+.navbar {
+     margin-bottom: 0px;
+    
+}
